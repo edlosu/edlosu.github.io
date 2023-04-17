@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet"
+    href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+    <style>
+            /*Navigation*/
+    .navlist{
+        width: 100%;
+        background-color: rgb(17, 24, 39);
+        overflow: hidden;
+
+        top: 0;
+        padding: 0px;
+
+        padding-top: 0%;
+    }
+    .navlist li{        
+        list-style-type: none;
+        text-align: center;
+        float:left;
+        padding: 15px;
+        color: rgb(0, 123, 248);
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .navlist li:hover {
+        background-color: rgb(1, 29, 119);
+    }
+    /*End of navigation*/
+
+           /*Login and top */
+    input[value="log in"]{
+      padding:3px;
+      width:20%;
+      margin-top: 3px;
+      float:right;
+      
+    }
+    .logtop {
+      min-inline-size:486px;
+      max-width: 600px;
+      max-height: 45px;
+      position: absolute;
+      padding:4px;
+      
+      right:0;
+      top:0;
+      
+      border: 1px solid #555;
+    }
+    /*End of login and top*/
+
+
+    #topMenu {
+        border: 1px dotted #555;
+        margin-bottom: 5%;
+        margin-left:-40px;
+        
+    }
+     #topMenu li{
+        list-style-type: none;
+        float: left;
+        padding: 4px;
+        width: 120px;
+    }
+
+    #content{
+        margin-top: 95px;
+    }
+
+
+        .video{
+            object-fit:fill;
+        }
+        h1 {
+            text-align: center;
+        }
+        .match{
+            margin:5px;
+            float: left;
+            width:30%;
+            padding: 4px;
+            border: 1px solid #555;
+        }
+        #logo{
+    position: absolute;
+    float: left;
+    width:85px;
+    top:0;
+    left: 0;
+
+  }
+  .main{
+    margin-left: 2%;
+  }
+    </style>
+    <body>
+          <!--Login and top-->
+          <img src="logo.jpg" id="logo">
+    <div>
+        <form class="logtop">
+            <label for="name">Username</label>
+            <input id=name type="text" placeholder="Username" >
+            <label for="pass">Password</label>
+            <input id=pass type="text" placeholder="Password"> <br>
+            <a href="login.html">register</a>
+            <input id=log type="submit" value="log in">
+        </form>   
+    </div>
+
+    <!-- Start site content-->
+    <div id="content">
+    <!--Top Navigational bar -->
+    <ul class="navlist">
+        <li><a href="main.html">Home</a></li>
+        <li><a href="contactus.html"> Contact Us</a></li>
+        <li><a href=gallery.html> Gallery </a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="current.html">Current Members</a></li>
+    <!---->   
+    </ul>
+    <div class="main">
+        <h1 >Gallery</h1>
+        <div class="group">
+            <div class="match">        
+                <iframe width = 100% height=100% class="video" src="https://www.youtube.com/embed/H9HxVBFLNjs"></iframe>
+                <div >Description</div>
+            </div>
+
+            <div class="match">
+                <img src="image1.png" width="100%" height=100%>
+                <div>Desciption2 </div>
+            </div>
+
+            <div class="match">
+                <img src="image5.jpg" width="100%" height=100%>
+                <div>Desciption2 </div>
+            </div>
+
+            <div class="match">
+                <img src="image3.jpg" width="100%" height=100%>
+                <div>Desciption2 </div>
+            </div>
+
+            <div class="match">
+                <img src="image4.jpg" width="100%" height=100%>
+                <div>Desciption2 </div>
+            </div>
+
+        </div>
+    </div>
+        <script>
+                  // Check for login data
+          var send= document.getElementById("log");
+        send.addEventListener('click', function(){
+          nm = document.getElementById("name");
+          ps = document.getElementById("pass");
+            if (nm.value ==="" || ps.value===""){
+              alert("Fields cannot be empty")
+            }
+            else {
+              alert("Incorrect login")
+            }
+        })
+      // end of login 
+        </script>
+    </body>
+</html>
